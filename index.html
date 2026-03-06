@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html class="dark" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>StellarTech Home - Cyberpunk E-commerce</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>StellarTech Home - Cyberpunk E-commerce</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -21,7 +26,7 @@
                     fontFamily: {
                         "display": ["Outfit", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "1.5rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "1.5rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px" },
                 },
             },
         }
@@ -29,317 +34,423 @@
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/app.js" defer></script>
 </head>
-<body class="font-display bg-background-light dark:bg-background-dark text-slate-100 min-h-screen flex flex-col antialiased">
-<header class="fixed top-0 w-full z-50 glass px-6 py-4 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl">token</span>
-<h2 class="text-xl font-bold tracking-[-0.02em] text-white">StellarTech</h2>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Inicio</a>
-<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Ofertas</a>
-</nav>
-<a href="carrito.html" class="glass rounded-full flex items-center gap-2 px-4 py-2 hover:bg-white/5 transition-colors text-white" style="text-decoration:none;">
-<span class="material-symbols-outlined text-slate-300 text-xl">shopping_cart</span>
-<span class="cart-badge bg-primary text-background-dark text-xs font-bold px-2 py-0.5 rounded-full">0</span>
-</a>
-</header>
-<main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex flex-col gap-24 pb-20">
-<section class="flex flex-col md:flex-row items-center justify-between gap-12 mt-12 md:mt-20">
-<div class="flex flex-col gap-6 md:w-1/2 z-10">
-<h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.02em] text-white">
-                    Tecnología de <br/><span class="text-gradient">Vanguardia</span> <br/>a tu alcance
+
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-100 min-h-screen flex flex-col antialiased">
+    <header class="fixed top-0 w-full z-50 glass px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-3xl">token</span>
+            <h2 class="text-xl font-bold tracking-[-0.02em] text-white">StellarTech</h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Inicio</a>
+            <a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Ofertas</a>
+        </nav>
+        <a href="carrito.html"
+            class="glass rounded-full flex items-center gap-2 px-4 py-2 hover:bg-white/5 transition-colors text-white"
+            style="text-decoration:none;">
+            <span class="material-symbols-outlined text-slate-300 text-xl">shopping_cart</span>
+            <span class="cart-badge bg-primary text-background-dark text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+        </a>
+    </header>
+    <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex flex-col gap-24 pb-20">
+        <section class="flex flex-col md:flex-row items-center justify-between gap-12 mt-12 md:mt-20">
+            <div class="flex flex-col gap-6 md:w-1/2 z-10">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.02em] text-white">
+                    Tecnología de <br /><span class="text-gradient">Vanguardia</span> <br />a tu alcance
                 </h1>
-<p class="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-lg">
+                <p class="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-lg">
                     Descubre los mejores equipos tecnológicos con estilo cyberpunk y rendimiento extremo.
                 </p>
-<button class="bg-gradient-btn text-white font-bold py-4 px-8 rounded-full w-fit mt-4 text-lg shadow-[0_0_20px_rgba(176,38,255,0.4)]">
+                <button
+                    class="bg-gradient-btn text-white font-bold py-4 px-8 rounded-full w-fit mt-4 text-lg shadow-[0_0_20px_rgba(176,38,255,0.4)]">
                     Ver Productos
                 </button>
-</div>
-<div class="md:w-1/2 w-full flex justify-center relative">
-<div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full z-0"></div>
-<div class="w-full aspect-square max-w-md rounded-2xl bg-center bg-cover bg-no-repeat glass-card z-10 relative overflow-hidden" data-alt="Abstract glowing cyberpunk cube" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHsIfy5WeG_YAkvg2-SuQpQ5E6fwe1w3T_2rsCQLqqxQzrfbPVYuOhqPZ7y0hKeconfh70JZ5FTEET7XRyjbEtutjPiYJ_ckI9dHeaq5UIPVJP29yHhbguyUaCsgasgAceqXKyynXAjSM7DQJ2UXh_97UbJv-qPs8kS1XJQT5ewTRsiYLdkYkriqhRDYs7kLUaIqunjlSiy-QHAACbXvxzDejlfkiK0jhjzJflER9SLCIFNSbC7Fn1VtQ_ZwsqaP1tcTGUhWVVfL0');">
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
-</div>
-</div>
-</section>
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-<div class="glass-card p-6 flex flex-col gap-4 transform transition-transform hover:-translate-y-2">
-<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
-<span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
-</div>
-<h3 class="text-xl font-bold text-white tracking-[-0.02em]">Envío Ultra Rápido</h3>
-<p class="text-slate-400 text-sm leading-relaxed">Recibe tus productos en tiempo récord, directamente a tu base.</p>
-</div>
-<div class="glass-card p-6 flex flex-col gap-4 transform transition-transform hover:-translate-y-2 mt-0 md:mt-6">
-<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/20">
-<span class="material-symbols-outlined text-secondary text-2xl">verified_user</span>
-</div>
-<h3 class="text-xl font-bold text-white tracking-[-0.02em]">Garantía Extendida</h3>
-<p class="text-slate-400 text-sm leading-relaxed">Cobertura total para tu tranquilidad en todos nuestros sistemas.</p>
-</div>
-<div class="glass-card p-6 flex flex-col gap-4 transform transition-transform hover:-translate-y-2 mt-0 md:mt-12">
-<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
-<span class="material-symbols-outlined text-primary text-2xl">lock</span>
-</div>
-<h3 class="text-xl font-bold text-white tracking-[-0.02em]">Pago Seguro</h3>
-<p class="text-slate-400 text-sm leading-relaxed">Transacciones 100% encriptadas en la red neuronal.</p>
-</div>
-</section>
-<section class="flex flex-col gap-10">
-<div class="flex items-end justify-between">
-<h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-white">Arsenal Tech</h2>
-<a class="text-primary text-sm font-medium hover:underline hidden sm:block" href="#">Ver todo el catálogo</a>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="products-grid">
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative" data-alt="Futuristic sleek laptop glowing" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHZWEDGVyuTNdhANY_-eyks8HfXDxWUAJcWbS8llytFlbHWXRzc7as7XAkkMJ83nYOVl5CETfkjcth6wAmDG1uS6yOJKShg2fSnCzGTjSl6up1Ii9Ly4_hZY9hNZkBvJ56SpVE4ms-XcFCiiLxBrhbnozZq_WGRLxH2_DixeZL1dVoVKIUj8UBI-AY5wx0nFh2wQHibWHwbCgK66x9-aVOiQiXIAeDu5OrU64nZwZD9VyUrTbiQt4f1NjKwH2TiFrnA91TwRIIYjQ');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">CyberBlade Laptop</h4>
-<p class="text-primary font-black text-xl mt-auto">$1199.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+            </div>
+            <div class="md:w-1/2 w-full flex justify-center relative">
+                <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full z-0"></div>
+                <div class="w-full aspect-square max-w-md rounded-2xl bg-center bg-cover bg-no-repeat glass-card z-10 relative overflow-hidden"
+                    data-alt="Abstract glowing cyberpunk cube"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHsIfy5WeG_YAkvg2-SuQpQ5E6fwe1w3T_2rsCQLqqxQzrfbPVYuOhqPZ7y0hKeconfh70JZ5FTEET7XRyjbEtutjPiYJ_ckI9dHeaq5UIPVJP29yHhbguyUaCsgasgAceqXKyynXAjSM7DQJ2UXh_97UbJv-qPs8kS1XJQT5ewTRsiYLdkYkriqhRDYs7kLUaIqunjlSiy-QHAACbXvxzDejlfkiK0jhjzJflER9SLCIFNSbC7Fn1VtQ_ZwsqaP1tcTGUhWVVfL0');">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+            <div class="glass-card p-6 flex flex-col gap-4 transform transition-transform hover:-translate-y-2">
+                <div
+                    class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                    <span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
+                </div>
+                <h3 class="text-xl font-bold text-white tracking-[-0.02em]">Envío Ultra Rápido</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Recibe tus productos en tiempo récord, directamente a
+                    tu base.</p>
+            </div>
+            <div
+                class="glass-card p-6 flex flex-col gap-4 transform transition-transform hover:-translate-y-2 mt-0 md:mt-6">
+                <div
+                    class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/20">
+                    <span class="material-symbols-outlined text-secondary text-2xl">verified_user</span>
+                </div>
+                <h3 class="text-xl font-bold text-white tracking-[-0.02em]">Garantía Extendida</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Cobertura total para tu tranquilidad en todos nuestros
+                    sistemas.</p>
+            </div>
+            <div
+                class="glass-card p-6 flex flex-col gap-4 transform transition-transform hover:-translate-y-2 mt-0 md:mt-12">
+                <div
+                    class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                    <span class="material-symbols-outlined text-primary text-2xl">lock</span>
+                </div>
+                <h3 class="text-xl font-bold text-white tracking-[-0.02em]">Pago Seguro</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Transacciones 100% encriptadas en la red neuronal.</p>
+            </div>
+        </section>
+        <section class="flex flex-col gap-10">
+            <div class="flex items-end justify-between">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-white">Arsenal Tech</h2>
+                <a class="text-primary text-sm font-medium hover:underline hidden sm:block" href="#">Ver todo el
+                    catálogo</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="products-grid">
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative"
+                        data-alt="Futuristic sleek laptop glowing"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHZWEDGVyuTNdhANY_-eyks8HfXDxWUAJcWbS8llytFlbHWXRzc7as7XAkkMJ83nYOVl5CETfkjcth6wAmDG1uS6yOJKShg2fSnCzGTjSl6up1Ii9Ly4_hZY9hNZkBvJ56SpVE4ms-XcFCiiLxBrhbnozZq_WGRLxH2_DixeZL1dVoVKIUj8UBI-AY5wx0nFh2wQHibWHwbCgK66x9-aVOiQiXIAeDu5OrU64nZwZD9VyUrTbiQt4f1NjKwH2TiFrnA91TwRIIYjQ');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">CyberBlade Laptop</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$1199.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative" data-alt="Neon glowing gaming headset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrVIO1Jzf6XBXyDJ1iT15Pb4zh7vGaISM5H0HJoj46fAIeDNcC6vlRcfRpEvJ8484XU6y5nULtDgTX4XLe3lecGSnJXQB-kIO2i_IQEtf8LPGtE4k1hGPaoygEZMGmMxwax_IVeRqjr_i6lzrx8xT3fHvCwy7ZC51spYs4r7mvVzAtdNNafXBkSL3D8UH2GkWfTmAd7Xo1ynqQHfAyVoccLylRl7VXigNTwANVC1KwbixdoX-oFjKyOKj7wsg1-YZYheVBIdKQoEI');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Neon Pulse Headset</h4>
-<p class="text-primary font-black text-xl mt-auto">$199.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative"
+                        data-alt="Neon glowing gaming headset"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrVIO1Jzf6XBXyDJ1iT15Pb4zh7vGaISM5H0HJoj46fAIeDNcC6vlRcfRpEvJ8484XU6y5nULtDgTX4XLe3lecGSnJXQB-kIO2i_IQEtf8LPGtE4k1hGPaoygEZMGmMxwax_IVeRqjr_i6lzrx8xT3fHvCwy7ZC51spYs4r7mvVzAtdNNafXBkSL3D8UH2GkWfTmAd7Xo1ynqQHfAyVoccLylRl7VXigNTwANVC1KwbixdoX-oFjKyOKj7wsg1-YZYheVBIdKQoEI');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Neon Pulse Headset</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$199.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative" data-alt="Mechanical keyboard with RGB" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlUxjK5l_dxrJ1B9wkXJPCwF14LTKPLzYM2rkCQsAuNebpHz00n52gdtbBGEw7LIEQ08dwGUH1w7kYlOTJtxGdkHSQHeFVd7xeQqcOWO4QLUE4_kWcvhi6dkfXiiNLVtiENNuzVx3i96p3RRmvlhUXGGZgZNtnRNpFmXpVhVixd4oGTVSh1tdkGXYxeTN5kh8HrycevAL5qfidB11N3glA_vlMjzNsbLrILCOXEO4pMPSeEfae7Wmqd59zROBG01sqp0MO0bicvUo');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">MechKey RGB Pro</h4>
-<p class="text-primary font-black text-xl mt-auto">$149.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative"
+                        data-alt="Mechanical keyboard with RGB"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlUxjK5l_dxrJ1B9wkXJPCwF14LTKPLzYM2rkCQsAuNebpHz00n52gdtbBGEw7LIEQ08dwGUH1w7kYlOTJtxGdkHSQHeFVd7xeQqcOWO4QLUE4_kWcvhi6dkfXiiNLVtiENNuzVx3i96p3RRmvlhUXGGZgZNtnRNpFmXpVhVixd4oGTVSh1tdkGXYxeTN5kh8HrycevAL5qfidB11N3glA_vlMjzNsbLrILCOXEO4pMPSeEfae7Wmqd59zROBG01sqp0MO0bicvUo');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">MechKey RGB Pro</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$149.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative" data-alt="Ergonomic precision gaming mouse" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXsX_imEp5ZwrGoyXt9FtBggHovxCb1u0_n7ONiSZcYAfP7GDnUlNKG0SH4EBavBCYjbG0urBshtKH9RyGb4gTqWlo4zILsyLVbjJbN7F7vnlVoiuYKIzNEJKMnMRu2pszK8iLL8QkjK8KYbxoQAkxlJJKTGJ_JlCthx74zVn7McfNdIk7VvAlEgKD0LgWQPnUp6Xxh9XF3ws04heU59VBFHUI3VLRXxwn3oKjYW0SH6kfLm9bNdDYf-q6S5UrYFuLAs0sFr1aXY0');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Quantum Precision Mouse</h4>
-<p class="text-primary font-black text-xl mt-auto">$89.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative"
+                        data-alt="Ergonomic precision gaming mouse"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXsX_imEp5ZwrGoyXt9FtBggHovxCb1u0_n7ONiSZcYAfP7GDnUlNKG0SH4EBavBCYjbG0urBshtKH9RyGb4gTqWlo4zILsyLVbjJbN7F7vnlVoiuYKIzNEJKMnMRu2pszK8iLL8QkjK8KYbxoQAkxlJJKTGJ_JlCthx74zVn7McfNdIk7VvAlEgKD0LgWQPnUp6Xxh9XF3ws04heU59VBFHUI3VLRXxwn3oKjYW0SH6kfLm9bNdDYf-q6S5UrYFuLAs0sFr1aXY0');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Quantum Precision Mouse</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$89.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Cyberpunk smartwatch" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-pjnDrCDSVqyN1YO2dE7Qdg8Mg8OV4Kp56EFSIS2dYVDGDbMfHDrc6UHU_P5QaMS7EdgNC7UuOwrYcrgki2vMLxZMwh3luFi6RrqyVOB7_MBBuL0JKzy2t2hfVIhGUTQsMeCTQHfI0tg2sH0Mt9zKaj0nzs16jpAkd1u8_7ZVC0nNzrXOQiv5olkCs4Fz39k1BVAveLY5_iyRe8FHSUeYa-0uuKMEe3Xg5HKGYnpTBPDXxgu3scRCckFE7W9Hn3ae5k0WY-Fyd_Y');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Chrono Nexus Watch</h4>
-<p class="text-primary font-black text-xl mt-auto">$249.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Cyberpunk smartwatch"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-pjnDrCDSVqyN1YO2dE7Qdg8Mg8OV4Kp56EFSIS2dYVDGDbMfHDrc6UHU_P5QaMS7EdgNC7UuOwrYcrgki2vMLxZMwh3luFi6RrqyVOB7_MBBuL0JKzy2t2hfVIhGUTQsMeCTQHfI0tg2sH0Mt9zKaj0nzs16jpAkd1u8_7ZVC0nNzrXOQiv5olkCs4Fz39k1BVAveLY5_iyRe8FHSUeYa-0uuKMEe3Xg5HKGYnpTBPDXxgu3scRCckFE7W9Hn3ae5k0WY-Fyd_Y');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Chrono Nexus Watch</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$249.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="VR Headset with glowing details" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwA-wqr-lph4PMj6yoMrfqNIIrVjZ0ue47aRMnO0bLAhEqgPI-g7r-MMypR5eds0imTPT7iEuR4SO5L1obIcIChPMjuUpdvAACd2hHlaqFjz4Zvp-R-GoAihwR7gX0iQnDWZBf6HKCmDry5QpU7OVoaVSEs1RXrtNY6xJAqhx--pWz369_BHvRHAWj-24E6D-kCq-Ll6njQvZHlBWrLxHpHXuElV-CVYeg3Vs1l_tMT6UHlga1xM7af_spfZiyeG_j6YkC2Sbka0I');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Immersive VR Goggles</h4>
-<p class="text-primary font-black text-xl mt-auto">$499.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="VR Headset with glowing details"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwA-wqr-lph4PMj6yoMrfqNIIrVjZ0ue47aRMnO0bLAhEqgPI-g7r-MMypR5eds0imTPT7iEuR4SO5L1obIcIChPMjuUpdvAACd2hHlaqFjz4Zvp-R-GoAihwR7gX0iQnDWZBf6HKCmDry5QpU7OVoaVSEs1RXrtNY6xJAqhx--pWz369_BHvRHAWj-24E6D-kCq-Ll6njQvZHlBWrLxHpHXuElV-CVYeg3Vs1l_tMT6UHlga1xM7af_spfZiyeG_j6YkC2Sbka0I');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Immersive VR Goggles</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$499.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="High-end graphics card" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIJO_h6H3dARHxE9Sqcbuomp-_FfhN_1LeCeGJ4pffm9U1R86Quymgc4bq0saoyUOwHK7X1OJV4g_dqFeXU_lVa5LfpnoHrsy6sbY2Fz9Jlhos97n_tNfVrpS7tP3OpO08Pn0IEE63MlwkYx9t9QvzDuyP2_WqvT-dZ8xSldtMV6T2k7TdnYMOgpHgOl4j4aCM8gaidjNrpsRBjZnr7Nu6dY8D1raQAEacMCo_f5TAVPpeimJAFObfC7gxDPENGBpFIZVzFwcVcck');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">TitanX GPU Unit</h4>
-<p class="text-primary font-black text-xl mt-auto">$899.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="High-end graphics card"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIJO_h6H3dARHxE9Sqcbuomp-_FfhN_1LeCeGJ4pffm9U1R86Quymgc4bq0saoyUOwHK7X1OJV4g_dqFeXU_lVa5LfpnoHrsy6sbY2Fz9Jlhos97n_tNfVrpS7tP3OpO08Pn0IEE63MlwkYx9t9QvzDuyP2_WqvT-dZ8xSldtMV6T2k7TdnYMOgpHgOl4j4aCM8gaidjNrpsRBjZnr7Nu6dY8D1raQAEacMCo_f5TAVPpeimJAFObfC7gxDPENGBpFIZVzFwcVcck');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">TitanX GPU Unit</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$899.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Cybernetic arm accessory" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_1JPJYwRaiCB_4PR5TF6Z86tz_eU5tlj7oPJy_vVis8npdbfNE3QjMER5eh1iZMgQvOoS7jt8tHay-WLAHBBQDBFCKWzBPmiWjPnUMgKFNzQ87R65fM2B301Z-sV4RAJ2vr9rn_ybE4hoOTN1go4kOzLx7vQmHxnjsSRAKlY7CsGCpLbnAxYy3Nvi4FA1jdw6EhYG_NoqvQ868qdkHlqF2c-C3cV_j7f2mfjlFDqvJTqDl4DgY_n_CxHwdrDaulKRw6WzBRn2mR8');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">NeuroLink Adapter</h4>
-<p class="text-primary font-black text-xl mt-auto">$129.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Cybernetic arm accessory"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_1JPJYwRaiCB_4PR5TF6Z86tz_eU5tlj7oPJy_vVis8npdbfNE3QjMER5eh1iZMgQvOoS7jt8tHay-WLAHBBQDBFCKWzBPmiWjPnUMgKFNzQ87R65fM2B301Z-sV4RAJ2vr9rn_ybE4hoOTN1go4kOzLx7vQmHxnjsSRAKlY7CsGCpLbnAxYy3Nvi4FA1jdw6EhYG_NoqvQ868qdkHlqF2c-C3cV_j7f2mfjlFDqvJTqDl4DgY_n_CxHwdrDaulKRw6WzBRn2mR8');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">NeuroLink Adapter</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$129.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Futuristic gaming chair" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDl1PlwgmbhB0P4N6QtznpKylWGdedD1dieB55bDCaltGf0znwBOniXRKeo9r0cxuGJt8UYesa2sIYP12xtqPMTvjAW8oKBryx7O0Ct-ZHDDgoNVnVDlV8zdEHsKGUa6-WD97LQx7j7plli5aSEpHIL8RpRAiQEIgRZAinIOdBFp3GykITQF4IMUltH8V5mIjKBvdqY2iPgAZ15dMszq-ZTcNvO6yNcYbbEvpm6JtXOG2SvdSckfLDMHF87L4g5veMWo0ECDd9aTXk');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Command Throne</h4>
-<p class="text-primary font-black text-xl mt-auto">$349.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Futuristic gaming chair"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDl1PlwgmbhB0P4N6QtznpKylWGdedD1dieB55bDCaltGf0znwBOniXRKeo9r0cxuGJt8UYesa2sIYP12xtqPMTvjAW8oKBryx7O0Ct-ZHDDgoNVnVDlV8zdEHsKGUa6-WD97LQx7j7plli5aSEpHIL8RpRAiQEIgRZAinIOdBFp3GykITQF4IMUltH8V5mIjKBvdqY2iPgAZ15dMszq-ZTcNvO6yNcYbbEvpm6JtXOG2SvdSckfLDMHF87L4g5veMWo0ECDd9aTXk');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Command Throne</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$349.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Advanced cooling system" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCauvmsM6GJhvqlCgWZ7SNEcWfTzySFTBiFuEkiRwgmn8CJqtS0Z9Dtk8pbh46lYgUrFuZuft3j4J2MdZG7bnTicCX6JIfn7XJ3HOedU01k4IJ85WkIgpOLH-9ywBV-7fTW2IAaZ49gm_WyddD9Z2DPP1ujdGXOehkBowvQiVH0NdxOU0irPOaPK6mjLlTJGsDYWv0habpMW74yBNcnbR-uh0ejhwfkHK8wYAfINZQ6LAJzr_sAnkvFAe81jk_sLdEPHs0SQlUU8H0');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Cryo-Core Cooler</h4>
-<p class="text-primary font-black text-xl mt-auto">$159.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Advanced cooling system"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCauvmsM6GJhvqlCgWZ7SNEcWfTzySFTBiFuEkiRwgmn8CJqtS0Z9Dtk8pbh46lYgUrFuZuft3j4J2MdZG7bnTicCX6JIfn7XJ3HOedU01k4IJ85WkIgpOLH-9ywBV-7fTW2IAaZ49gm_WyddD9Z2DPP1ujdGXOehkBowvQiVH0NdxOU0irPOaPK6mjLlTJGsDYWv0habpMW74yBNcnbR-uh0ejhwfkHK8wYAfINZQ6LAJzr_sAnkvFAe81jk_sLdEPHs0SQlUU8H0');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Cryo-Core Cooler</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$159.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Holographic display monitor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCS01YzkiPEM18XOufR6WN-gFXwVN_EFfqk2kXG0C8KNs4L5Ki5lApTcjlbQtnpMxkJ0guqTGDmjsWc80WUesQtJ8CtnOsOVjRxsyxznuyHKU-L3w0z_ld5ZEshNsczPfvWg6FJcFFSTdPr9dGV3buxie5V_OILUYRO-tufVSyWLKCFj9ZUBq6pwAWeyez-47ryULLAxAOaRZm4n45PUqBOK3rjkgoJJZoCuwVbmqUOfGVE0EAnyz7PDCNhF6C-dBWjBCDa57fTWoE');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">HoloView Monitor</h4>
-<p class="text-primary font-black text-xl mt-auto">$699.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Holographic display monitor"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCS01YzkiPEM18XOufR6WN-gFXwVN_EFfqk2kXG0C8KNs4L5Ki5lApTcjlbQtnpMxkJ0guqTGDmjsWc80WUesQtJ8CtnOsOVjRxsyxznuyHKU-L3w0z_ld5ZEshNsczPfvWg6FJcFFSTdPr9dGV3buxie5V_OILUYRO-tufVSyWLKCFj9ZUBq6pwAWeyez-47ryULLAxAOaRZm4n45PUqBOK3rjkgoJJZoCuwVbmqUOfGVE0EAnyz7PDCNhF6C-dBWjBCDa57fTWoE');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">HoloView Monitor</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$699.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Smart lighting panels" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsgmSI6MLo1nJf4jzmKCaZrydBVtZWD1We2izk_TVCjGG6O9RSz9fa3v9lIshoe6Al4hUAs4WYAAiX3U87oZmUzSY_Kbc606Tu2fQzqLjOt1Ym79-ljIOPuf69GZCLLQGMoefuZ2ES9pye73M_sVuB-ZD-GoNDCKcfwZyKM7yiw6P-y_glH6c8lwyeS1IuGUdBukCN68DtYZM4n52mu4WuZ85NnWH223p9jeqMf3G2VzNg_FYdLLeGz-Orc70IzBcKYOvACIcpkvE');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Neon Grid Panels</h4>
-<p class="text-primary font-black text-xl mt-auto">$79.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Smart lighting panels"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsgmSI6MLo1nJf4jzmKCaZrydBVtZWD1We2izk_TVCjGG6O9RSz9fa3v9lIshoe6Al4hUAs4WYAAiX3U87oZmUzSY_Kbc606Tu2fQzqLjOt1Ym79-ljIOPuf69GZCLLQGMoefuZ2ES9pye73M_sVuB-ZD-GoNDCKcfwZyKM7yiw6P-y_glH6c8lwyeS1IuGUdBukCN68DtYZM4n52mu4WuZ85NnWH223p9jeqMf3G2VzNg_FYdLLeGz-Orc70IzBcKYOvACIcpkvE');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Neon Grid Panels</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$79.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Wireless charging pad" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJc_dOjU7NVMXjKcizUmXDDi29XQX8saH5VSiyxKJ3fAp7zu-1WqyuqE0gTcHa9VaxYkpV9v1n1MB6IIqy4ad3EOHey-rGJtDi0XJ80nZ7qYymCw9cDnAs8-JSJG7KnWi8pZme3I-_lFiGuNIwi7wQRd46bjSzec05JJTikf-fpDEdSve4qDEgW3On9vHwkCvg0CWMd6HKW0XknB55Yjer22xAmObfDD_S9Xwz0AuWpahHjqcQ9JcNIkMWwEDv0QM505U3J4lzXhg');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Plasma Charge Pad</h4>
-<p class="text-primary font-black text-xl mt-auto">$59.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Wireless charging pad"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJc_dOjU7NVMXjKcizUmXDDi29XQX8saH5VSiyxKJ3fAp7zu-1WqyuqE0gTcHa9VaxYkpV9v1n1MB6IIqy4ad3EOHey-rGJtDi0XJ80nZ7qYymCw9cDnAs8-JSJG7KnWi8pZme3I-_lFiGuNIwi7wQRd46bjSzec05JJTikf-fpDEdSve4qDEgW3On9vHwkCvg0CWMd6HKW0XknB55Yjer22xAmObfDD_S9Xwz0AuWpahHjqcQ9JcNIkMWwEDv0QM505U3J4lzXhg');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Plasma Charge Pad</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$59.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="High capacity power bank" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9AF6ANQp8cJphG0F7-8oOVrprgsMd0LVZGs8jbpfnvBL9tquppQHSfhl-gHCq7BynwCc3Zzuvhk78F4KW4uopNDbBCQ97yOeGGQPbyq-eQtJFCZkM4Yvx7nc2CwkyUiezaRmQwapPJe-3zQ3-6OuoHfs12lN5wLubFCCSYC8ziRARmml5tJqGqsy6QA8J0KW6x7a4yKgWJfj7VYWGirJFjoRrhFrg1xxL9qbz4bTgvmTgzAhPfG9WDcyynfVkhHB8OkOHlQKg14Y');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Energy Cell Pro</h4>
-<p class="text-primary font-black text-xl mt-auto">$109.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="High capacity power bank"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9AF6ANQp8cJphG0F7-8oOVrprgsMd0LVZGs8jbpfnvBL9tquppQHSfhl-gHCq7BynwCc3Zzuvhk78F4KW4uopNDbBCQ97yOeGGQPbyq-eQtJFCZkM4Yvx7nc2CwkyUiezaRmQwapPJe-3zQ3-6OuoHfs12lN5wLubFCCSYC8ziRARmml5tJqGqsy6QA8J0KW6x7a4yKgWJfj7VYWGirJFjoRrhFrg1xxL9qbz4bTgvmTgzAhPfG9WDcyynfVkhHB8OkOHlQKg14Y');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Energy Cell Pro</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$109.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Sleek cyberpunk backpack" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPxTqVqSop20GJ1E-xWo5MpZjIfr95ok7J_PbEiC7lz1TWEQKByBzxFXSBLCsXZvDVlN41G4DfMdZi12DUA-8S7lJAqBy1FadLScmsMYDXEPbPbczYrQg9TWiEcIDG_eyBoJM4C9pgx67MHcUg0Bnc-_vRAGb5IFrYOpvMsil3XDk42LR3Ed26TAYqeyHHMgOtO3PQNc-dAnIUUYwYlfn6CNgD3VbRRwZE_pi9h5t2xUmEMm2kekbFJKM72_Tdn9QFkfCiIQeYqmY');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Stealth Gear Bag</h4>
-<p class="text-primary font-black text-xl mt-auto">$139.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Sleek cyberpunk backpack"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPxTqVqSop20GJ1E-xWo5MpZjIfr95ok7J_PbEiC7lz1TWEQKByBzxFXSBLCsXZvDVlN41G4DfMdZi12DUA-8S7lJAqBy1FadLScmsMYDXEPbPbczYrQg9TWiEcIDG_eyBoJM4C9pgx67MHcUg0Bnc-_vRAGb5IFrYOpvMsil3XDk42LR3Ed26TAYqeyHHMgOtO3PQNc-dAnIUUYwYlfn6CNgD3VbRRwZE_pi9h5t2xUmEMm2kekbFJKM72_Tdn9QFkfCiIQeYqmY');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Stealth Gear Bag</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$139.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-<div class="glass-card flex flex-col overflow-hidden group">
-<div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800" data-alt="Smart glasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvv1apFB4v4HaH4xjVFlrcQ4fPAQzSxvsfXofbkuni8UomXg4OjWzKqWKonSb21lv3g8AcPl9UDlH4VK4egx0Xf_RI-0dHpMpbvLF9LBfQ-amxM1WynnQ769_Gnpo9Uou4zMhsgBR14G-xpmPi-0_PeCsTMxD91OYAl30buaxPIIOR2f1ELtPsrp3LZ5xuwx4RuTpL7AhwNMtL8RVuuCdc_pinV05XiHcjAP2i7Se8cz0o4ocWtgLT2n032wIX5MaUgbSL-1HvqHI');">
-<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
-</div>
-<div class="p-5 flex flex-col gap-3 flex-grow">
-<h4 class="text-lg font-bold text-white">Aura Smart Lenses</h4>
-<p class="text-primary font-black text-xl mt-auto">$299.00</p>
-<button class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col overflow-hidden group">
+                    <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative bg-slate-800"
+                        data-alt="Smart glasses"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvv1apFB4v4HaH4xjVFlrcQ4fPAQzSxvsfXofbkuni8UomXg4OjWzKqWKonSb21lv3g8AcPl9UDlH4VK4egx0Xf_RI-0dHpMpbvLF9LBfQ-amxM1WynnQ769_Gnpo9Uou4zMhsgBR14G-xpmPi-0_PeCsTMxD91OYAl30buaxPIIOR2f1ELtPsrp3LZ5xuwx4RuTpL7AhwNMtL8RVuuCdc_pinV05XiHcjAP2i7Se8cz0o4ocWtgLT2n032wIX5MaUgbSL-1HvqHI');">
+                        <div
+                            class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 flex-grow">
+                        <h4 class="text-lg font-bold text-white">Aura Smart Lenses</h4>
+                        <p class="text-primary font-black text-xl mt-auto">$299.00</p>
+                        <button
+                            class="w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
                             Agregar al Carrito
                         </button>
-</div>
-</div>
-</div>
-<a class="text-primary text-sm font-medium hover:underline sm:hidden text-center mt-4" href="#">Ver todo el catálogo</a>
-</section>
-<section class="glass-card p-8 md:p-16 flex flex-col items-center text-center gap-8 relative overflow-hidden mt-10">
-<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 z-0"></div>
-<div class="relative z-10 flex flex-col gap-4 max-w-2xl">
-<h2 class="text-3xl md:text-5xl font-black tracking-[-0.02em] text-white">
+                    </div>
+                </div>
+            </div>
+            <a class="text-primary text-sm font-medium hover:underline sm:hidden text-center mt-4" href="#">Ver todo el
+                catálogo</a>
+        </section>
+        <section
+            class="glass-card p-8 md:p-16 flex flex-col items-center text-center gap-8 relative overflow-hidden mt-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 z-0"></div>
+            <div class="relative z-10 flex flex-col gap-4 max-w-2xl">
+                <h2 class="text-3xl md:text-5xl font-black tracking-[-0.02em] text-white">
                     Únete a la Revolución Tecnológica
                 </h2>
-<p class="text-slate-400 text-lg leading-relaxed">
+                <p class="text-slate-400 text-lg leading-relaxed">
                     Suscríbete para recibir ofertas exclusivas, códigos de acceso y las últimas novedades del grid.
                 </p>
-</div>
-<form class="w-full max-w-md relative z-10 flex flex-col sm:flex-row gap-3">
-<input class="flex-grow bg-background-dark/80 border border-white/10 rounded-full px-6 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Ingresa tu correo encriptado..." type="email"/>
-<button class="bg-gradient-btn text-white font-bold py-3 px-8 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(0,240,255,0.3)]" type="submit">
+            </div>
+            <form class="w-full max-w-md relative z-10 flex flex-col sm:flex-row gap-3">
+                <input
+                    class="flex-grow bg-background-dark/80 border border-white/10 rounded-full px-6 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                    placeholder="Ingresa tu correo encriptado..." type="email" />
+                <button
+                    class="bg-gradient-btn text-white font-bold py-3 px-8 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(0,240,255,0.3)]"
+                    type="submit">
                     Suscribirse
                 </button>
-</form>
-</section>
-</main>
-<footer class="border-t border-white/5 pt-8 pb-12 px-6">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-lg">token</span>
-<span>© 2024 StellarTech. All rights reserved in the grid.</span>
-</div>
-<div class="flex gap-6">
-<a class="hover:text-primary transition-colors" href="#">Términos</a>
-<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
-<a class="hover:text-primary transition-colors" href="#">Soporte</a>
-</div>
-</div>
-</footer>
+            </form>
+        </section>
+    </main>
+    <footer class="border-t border-white/5 pt-8 pb-12 px-6">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">token</span>
+                <span>© 2024 StellarTech. All rights reserved in the grid.</span>
+            </div>
+            <div class="flex gap-6">
+                <a class="hover:text-primary transition-colors" href="#">Términos</a>
+                <a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+                <a class="hover:text-primary transition-colors" href="#">Soporte</a>
+            </div>
+        </div>
+    </footer>
 
-<!-- Product Modal -->
-<div id="product-modal" class="modal-overlay">
-    <div class="modal-content">
-        <button id="close-modal" class="modal-close">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-        <div id="modal-image" class="modal-image"></div>
-        <div class="modal-details">
-            <h3 id="modal-title" class="modal-title"></h3>
-            <p id="modal-price" class="modal-price"></p>
-            <p id="modal-desc" class="modal-desc">
-                Cargando datos decodificados desde el main grid. Este equipamiento de tecnología cyberpunk ofrece características avanzadas y rendimiento superior garantizado.
-            </p>
-            <div class="modal-actions">
-                <button id="modal-btn-add" class="bg-gradient-btn text-white font-bold py-3 px-8 rounded-full w-full shadow-[0_0_15px_rgba(176,38,255,0.4)]">
-                    Añadir al Carrito
-                </button>
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div id="modal-image" class="modal-image"></div>
+            <div class="modal-details">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <p id="modal-price" class="modal-price"></p>
+                <p id="modal-desc" class="modal-desc">
+                    Cargando datos decodificados desde el main grid. Este equipamiento de tecnología cyberpunk ofrece
+                    características avanzadas y rendimiento superior garantizado.
+                </p>
+                <div class="modal-actions">
+                    <button id="modal-btn-add"
+                        class="bg-gradient-btn text-white font-bold py-3 px-8 rounded-full w-full shadow-[0_0_15px_rgba(176,38,255,0.4)]">
+                        Añadir al Carrito
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-</body></html>
+</body>
+
+</html>

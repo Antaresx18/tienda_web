@@ -1,152 +1,85 @@
-// js/app.js
 import { api } from './api.js';
+import { cart } from './carrito.js';
 
-class CartManager {
-    constructor() {
-        this.items = JSON.parse(localStorage.getItem('cart')) || [];
-        this.updateCartBadge();
-    }
-
-    addItem(product) {
-        const existing = this.items.find(item => item.id === product.id);
-        if (existing) {
-            existing.cantidad += 1;
-        } else {
-            this.items.push({ ...product, cantidad: 1 });
-        }
-        this.save();
-        this.showToast(`${product.nombre} añadido al carrito`);
-    }
-
-    removeItem(productId) {
-        this.items = this.items.filter(item => item.id !== productId);
-        this.save();
-    }
-
-    updateQuantity(productId, cantidad) {
-        const item = this.items.find(i => i.id === productId);
-        if (item) {
-            item.cantidad = Math.max(1, cantidad);
-            this.save();
-        }
-    }
-
-    clearCart() {
-        this.items = [];
-        this.save();
-    }
-
-    getSubtotal() {
-        return this.items.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
-    }
-
-    save() {
-        localStorage.setItem('cart', JSON.stringify(this.items));
-        this.updateCartBadge();
-        // Disparar evento para que otras vistas se actualicen si es necesario
-        window.dispatchEvent(new Event('cartUpdated'));
-    }
-
-    updateCartBadge() {
-        const badges = document.querySelectorAll('.cart-badge');
-        const count = this.items.reduce((sum, item) => sum + item.cantidad, 0);
-        badges.forEach(badge => {
-            badge.textContent = count;
-        });
-    }
-
-    showToast(message) {
-        let container = document.querySelector('.toast-container');
-        if (!container) {
-            container = document.createElement('div');
-            container.className = 'toast-container';
-            document.body.appendChild(container);
-        }
-
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.innerHTML = `<span class="material-symbols-outlined">check_circle</span> ${message}`;
-        container.appendChild(toast);
-
-        // Remover después de la animación
-        setTimeout(() => toast.remove(), 3000);
-    }
-}
-
-export const cart = new CartManager();
-
-// Si estamos en la página de inicio, cargar los productos
-document.addEventListener('DOMContentLoaded', async () => {
+async function initApp() {
     const productsGrid = document.getElementById('products-grid');
-    if (productsGrid) {
-        productsGrid.innerHTML = '<div class="text-center w-full col-span-full"><p>Cargando arsenal...</p></div>';
-        try {
-            const products = await api.getProducts();
-            renderProducts(products);
-        } catch (error) {
-            productsGrid.innerHTML = '<div class="text-center text-red-500 w-full col-span-full"><p>Error al sincronizar con el Grid.</p></div>';
-        }
-    }
-});
+    if (!productsGrid) return;
 
-function renderProducts(products) {
-    const grid = document.getElementById('products-grid');
-    if (!grid) return;
-    
-    grid.innerHTML = '';
-    
+    productsGrid.innerHTML = '<div class="text-center w-full col-span-full py-20"><p class="text-primary animate-pulse text-xl">Sincronizando con el Grid...</p></div>';
+
+    const products = await api.getProducts();
+
+    if (products.length === 0) {
+        productsGrid.innerHTML = '<div class="text-center text-red-500 w-full col-span-full"><p>No hay productos disponibles en este momento.</p></div>';
+        return;
+    }
+
+    productsGrid.innerHTML = '';
+
     products.forEach(product => {
-        const card = document.createElement('div');
-        card.className = 'glass-card product-card';
-        card.style.cursor = 'pointer';
-        card.innerHTML = `
-            <div class="product-img" style="background-image: url('${product.imagen || 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&q=80'}')"></div>
-            <div class="product-info">
-                <h4 class="product-title">${product.nombre}</h4>
-                <p class="product-price">$${Number(product.precio).toFixed(2)}</p>
-                <button class="btn-add" data-id="${product.id}">Agregar al Carrito</button>
+        const productCard = document.createElement('div');
+        // Utilizamos las clases de Tailwind que dan el efecto Glassmorphism y alineación
+        productCard.className = 'glass-card flex flex-col overflow-hidden group cursor-pointer h-full';
+        
+        const imgUrl = product.imagen_url || 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&q=80';
+
+        productCard.innerHTML = `
+            <div class="aspect-square bg-center bg-cover bg-no-repeat w-full relative" 
+                 style="background-image: url('${imgUrl}')">
+                <div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors"></div>
+            </div>
+            <div class="p-5 flex flex-col gap-3 flex-grow text-left">
+                <h4 class="text-lg font-bold text-white">${product.nombre}</h4>
+                <p class="text-primary font-black text-xl mt-auto">$${Number(product.precio).toFixed(2)}</p>
+                <button class="btn-add w-full bg-white/5 hover:bg-gradient-btn border border-white/10 hover:border-transparent rounded-lg py-2.5 text-sm font-bold text-white transition-all duration-300">
+                    Agregar al Carrito
+                </button>
             </div>
         `;
 
-        card.addEventListener('click', (e) => {
-            // Evitar abrir modal si clickeó directamente en el botón
-            if (e.target.classList.contains('btn-add')) return;
-            openProductModal(product);
+        // Añadir evento del carrito directo desde JS (metodología más segura que onclick="")
+        const btnAdd = productCard.querySelector('.btn-add');
+        btnAdd.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que se abra el modal al dar clic en el botón
+            cart.addItem({
+                id_producto: product.id_producto, 
+                nombre: product.nombre, 
+                precio: product.precio,
+                imagen_url: product.imagen_url
+            });
         });
 
-        grid.appendChild(card);
-    });
-
-    // Agregar listeners a los botones
-    document.querySelectorAll('.btn-add').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const id = parseInt(e.target.dataset.id);
-            const product = products.find(p => p.id === id);
-            cart.addItem(product);
+        // Abrir el modal si hace clic en cualquier parte de la tarjeta
+        productCard.addEventListener('click', (e) => {
+            if (!e.target.classList.contains('btn-add')) {
+                openProductModal(product);
+            }
         });
+
+        productsGrid.appendChild(productCard);
     });
 }
 
+// Control del Modal
 function openProductModal(product) {
     const modal = document.getElementById('product-modal');
     if (!modal) return;
     
-    const imgEl = document.getElementById('modal-image');
-    const titleEl = document.getElementById('modal-title');
-    const priceEl = document.getElementById('modal-price');
-    const btnAddEl = document.getElementById('modal-btn-add');
+    const imgUrl = product.imagen_url || 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&q=80';
+    document.getElementById('modal-image').style.backgroundImage = `url('${imgUrl}')`;
+    document.getElementById('modal-title').textContent = product.nombre;
+    document.getElementById('modal-price').textContent = `$${Number(product.precio).toFixed(2)}`;
     
-    imgEl.style.backgroundImage = `url('${product.imagen || ''}')`;
-    titleEl.textContent = product.nombre;
-    priceEl.textContent = `$${Number(product.precio).toFixed(2)}`;
-    
-    btnAddEl.onclick = () => {
-        cart.addItem(product);
+    document.getElementById('modal-btn-add').onclick = () => {
+        cart.addItem({
+            id_producto: product.id_producto, 
+            nombre: product.nombre, 
+            precio: product.precio,
+            imagen_url: product.imagen_url
+        });
         closeProductModal();
     };
     
-    // Bloquear scroll
     document.body.style.overflow = 'hidden';
     modal.classList.add('active');
 }
@@ -155,19 +88,16 @@ function closeProductModal() {
     const modal = document.getElementById('product-modal');
     if (modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Restaurar scroll
+        document.body.style.overflow = 'auto';
     }
 }
 
-// Configurar cierre del modal
 document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('product-modal');
+    initApp();
     const closeBtn = document.getElementById('close-modal');
-    
     if (closeBtn) closeBtn.addEventListener('click', closeProductModal);
-    
+    const modal = document.getElementById('product-modal');
     if (modal) {
-        // Cerrar al clickear afuera del contenido
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeProductModal();
         });
